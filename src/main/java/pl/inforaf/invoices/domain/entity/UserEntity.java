@@ -10,6 +10,11 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "users")
 public class UserEntity extends BaseEntity {
+
+    public UserEntity() {
+
+    }
+
     @Column(name = "login", nullable = false)
     private String login;
 

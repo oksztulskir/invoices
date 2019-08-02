@@ -8,6 +8,8 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 /**
  * Created by Rafał on 2017-01-25.
  */
@@ -25,4 +27,16 @@ public class UserServiceImpl implements UserService {
     public UserEntity findById(Long id) {
         return userRepository.findOne(id);
     }
+
+    @Override
+    public UserEntity save(UserEntity user) {
+        return userRepository.save(user);
+    }
+
+    @Override
+    public List<UserEntity> getUsers() {
+        return userRepository.findAll();
+    }
+
+
 }
